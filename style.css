@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  background-color: whitesmoke;
+}
+
+#container {
+  width: 500px;
+  height: 700px;
+
+  align-self: center;
+  justify-self: center;
+
+  background-color: lavender;
+  display: grid;
+  grid-template-rows: 40% 20% 20% 20%;
+}
+
+#number {
+  align-self: center;
+  justify-self: center;
+  font-size: 7rem;
+}
+
+#buttons {
+  width: fit-content;
+  justify-self: center;
+}
+
+#buttons button {
+  margin: 0px 10px;
+  width: 90px;
+  height: 50px;
+}
+
+#clear-cont {
+  justify-self: center;
+}
+
+#clear-cont button {
+  height: 100px;
+  width: 200px;
+}
+
+#addition {
+  justify-self: center;
+  width: 300px;
+}
+
+#addition textarea {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  resize: none;
+}
+
+#addition {
+  margin: 0 auto;
+}
