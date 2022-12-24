@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="/index.js" defer></script>
+   
+     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <div id="container">
@@ -20,10 +21,10 @@
       <div id="clear-cont">
         <button id="clear-btn">Clear</button>
       </div>
-      <div id="addition">
-        <textarea id="addition-input"></textarea>
-        <p>Params: <span id="params"></span></p>
-        <p>Sum: <span id="sum"></span></p>
+      <div id="addition" x-data="{ params: [], sum(arr) { let y = 0; for (let x = 0; x < arr.length; x++) y += arr[x]; return y} }">
+        <textarea id="addition-input" x-on:input="params = $el.value.split(' ').map(el => el * 1)"></textarea>
+        <p>Params: <span id="params" x-model="params.join(', ')"></span></p>
+        <p>Sum: <span id="sum" x-model="sum(params)"></span></p>
       </div>
     </div>
   </body>
